@@ -1,9 +1,15 @@
 import React from 'react';
 
-import styles from './MainPage.scss';
+import WorkingData from 'components/WorkingData/WorkingData';
+import PersonalData from 'components/PersonalData/PersonalData.jsx'
 
-export const MainPage = () => {
-    return <div className={styles.wrapper}>111</div>;
-};
+import styles from 'components/MainPage/MainPage.scss';
+
+export const MainPage = () => (
+    <div className={styles.wrapper}>
+        <PersonalData />
+        <WorkingData />
+    </div>
+);
 
 export default MainPage;

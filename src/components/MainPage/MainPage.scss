@@ -1,3 +1,13 @@
 .wrapper {
-  color: red;
+  background-color: #000;
+  margin: 0 auto;
+  width: 70%;
+  padding: 50px 0;
+  display: flex;
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    width: 100%;
+  }
 }
