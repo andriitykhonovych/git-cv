@@ -11,6 +11,7 @@
     "build:dev": "webpack --config config/webpack/dev.js"
   },
   "dependencies": {
+    "json-server": "^0.15.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "webpack": "4.16.3"
@@ -34,7 +35,8 @@
     "postcss-loader": "3.0.0",
     "sass-loader": "7.0.3",
     "css-loader": "0.28.11",
-    "style-loader": "0.21.0"
+    "style-loader": "0.21.0",
+    "prop-types": "15.7.2"
   },
   "license": "ISC"
 }
