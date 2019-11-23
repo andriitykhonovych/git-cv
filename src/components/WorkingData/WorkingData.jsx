@@ -12,9 +12,9 @@ const data = [
         employments: [
             {
                 id: 10,
-                period: '1990',
-                company: 'qwerty',
-                position: 'qwerty',
+                period: '2016 - until now',
+                company: 'PMLAB',
+                position: 'Frontend developer',
                 description: 'qwerty'
             },
             {
@@ -55,17 +55,17 @@ const data = [
             {
                 id: 30,
                 item: 'HTML',
-                level: 70
+                level: '70%'
             },
             {
                 id: 31,
                 item: 'CSS',
-                level: 70
+                level: '70%'
             },
             {
                 id: 32,
                 item: 'JS',
-                level: 70
+                level: '70%'
             }
         ],
     },

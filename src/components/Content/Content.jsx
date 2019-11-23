@@ -32,26 +32,34 @@ export const Content = ({ data }) => (
                 </div>
             )}
             {dataItem.employments && dataItem.employments.map((employmentItem) =>
-                <Fragment key={employmentItem.id}>
-                    <div>{employmentItem.period}</div>
-                    <div>{employmentItem.company}</div>
-                    <div>{employmentItem.position}</div>
-                    <div>{employmentItem.description}</div>
-                </Fragment>
+                <div key={employmentItem.id} className={styles.employmentsWrapper}>
+                    <div className={styles.period}>{employmentItem.period}</div>
+                    <div className={styles.infoWrapper}>
+                        <div>{employmentItem.company}</div>
+                        <div>{employmentItem.position}</div>
+                        <div>{employmentItem.description}</div>
+                    </div>
+                </div>
             )}
             {dataItem.educations && dataItem.educations.map((educationItem) =>
-                <Fragment key={educationItem.id}>
-                    <div>{educationItem.period}</div>
-                    <div>{educationItem.company}</div>
-                    <div>{educationItem.position}</div>
-                    <div>{educationItem.description}</div>
-                </Fragment>
+                <div key={educationItem.id} className={styles.employmentsWrapper}>
+                    <div className={styles.period}>{educationItem.period}</div>
+                    <div className={styles.infoWrapper}>
+                        <div>{educationItem.company}</div>
+                        <div>{educationItem.position}</div>
+                        <div>{educationItem.description}</div>
+                    </div>
+                </div>
             )}
             {dataItem.skills && dataItem.skills.map((skillItem) =>
-                <Fragment key={skillItem.id}>
-                    <div>{skillItem.item}</div>
-                    <div>{skillItem.level}</div>
-                </Fragment>
+                <div key={skillItem.id} className={styles.skillsWrapper}>
+                    <div className={styles.skillItem}>{skillItem.item}</div>
+                    <div className={styles.skillItem}>
+                        <div className={styles.level}>
+                            {skillItem.level}
+                        </div>
+                    </div>
+                </div>
             )}
         </Fragment>
     )

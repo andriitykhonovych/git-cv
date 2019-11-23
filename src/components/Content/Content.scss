@@ -13,3 +13,36 @@
   align-items: center;
 }
 
+.employmentsWrapper, .skillsWrapper {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.period {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.infoWrapper {
+  flex: 2;
+}
+
+.skillItem {
+  flex: 1;
+}
+
+.skillsWrapper {
+  align-items: center;
+}
+
+.level {
+  border: 10px solid #f8ff13;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
