@@ -8,7 +8,7 @@ const propTypes = {
 };
 
 export const Content = ({ data }) => (
-    data.map((dataItem) =>
+    data && data.map((dataItem) =>
         <Fragment key={dataItem.id}>
             <div className={styles.title}>
                 <i className={`fas fa-${dataItem.icon}`} />
