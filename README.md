@@ -1,3 +1,3 @@
 # This is my git CV
 
-## Setup npm, install npm, run build, npm start
+## npm i, npm start, json-server db.json
