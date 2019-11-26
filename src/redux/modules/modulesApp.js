@@ -8,7 +8,7 @@ const WORKING_DATA = myDuck.createAction('WORKING_DATA');
 export function fetchPersonalData(personalData){
   return {
     type: PERSONAL_DATA,
-    payload: personalData,
+    payload: personalData
   }
 }
 
@@ -30,12 +30,14 @@ export default function reducer(state = initialState, action){
     return myDuck.createReducer({
       [PERSONAL_DATA]: (state) => ({
         state,
+        personalData: action.payload,
       })
     }, state);
   case WORKING_DATA:
     return myDuck.createReducer({
       [WORKING_DATA]: (state) => ({
         state,
+        workingData: action.payload,
       })
     }, state);
   default:
