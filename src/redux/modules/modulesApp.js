@@ -24,23 +24,27 @@ const initialState = {
   workingData: []
 };
 
+const personalDataReducer =  myDuck.createReducer({
+  [PERSONAL_DATA]: (state, action) => ({
+    ...state,
+    personalData: action.payload,
+  })
+}, initialState);
+
+const workingDataReducer =  myDuck.createReducer({
+  [WORKING_DATA]: (state, action) => ({
+    ...state,
+    workingData: action.payload,
+  })
+}, initialState);
+
 export default function reducer(state = initialState, action){
   switch (action.type){
     case PERSONAL_DATA:
-    return myDuck.createReducer({
-      [PERSONAL_DATA]: (state) => ({
-        state,
-        personalData: action.payload,
-      })
-    }, state);
+      return personalDataReducer({ ...state, personalData: action.payload });
     case WORKING_DATA:
-    return myDuck.createReducer({
-      [WORKING_DATA]: (state) => ({
-        state,
-        workingData: action.payload,
-      })
-    }, state);
-  default:
-    return state;
+      return workingDataReducer( { ...state, workingData: action.payload });
+    default:
+      return state;
   }
 }
