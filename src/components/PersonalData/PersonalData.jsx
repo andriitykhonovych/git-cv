@@ -1,4 +1,5 @@
 import React, { useState, useEffect }  from 'react';
+import { connect } from 'react-redux';
 import { fetchPersonalData } from 'redux/modules/modulesApp';
 
 import Avatar from 'components/Avatar/Avatar';
@@ -6,7 +7,7 @@ import Content from "components/Content/Content";
 
 import styles from 'components/PersonalData/PersonalData.scss';
 
-export const PersonalData = () => {
+export const PersonalData = ({ fetchPersonalData }) => {
     const [data] = useState([]);
 
     useEffect(() => {
@@ -25,4 +26,19 @@ export const PersonalData = () => {
   )
 };
 
-export default PersonalData;
+function mapStateToProps(state) {
+    return {
+        App: state.modulesApp
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        fetchPersonalData: (personalData) => dispatch(fetchPersonalData(personalData)),
+    };
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(PersonalData);

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import configureStore from './redux/configureStore';
 import actionTypes from './actions/actionTypes';
 
-import Container from './containers/container';
+import App from "./app";
 
 require('./style/index.scss');
 
@@ -14,7 +14,7 @@ const store = configureStore();
 function renderApp() {
     render(
         <Provider store={store}>
-            <Container />
+            <App />
         </Provider>,
         document.querySelector('#root'),
     );

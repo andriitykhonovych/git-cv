@@ -2,8 +2,8 @@ import { createDuck } from 'redux-duck';
 
 const myDuck = createDuck('FETCH');
 
-const PERSONAL_DATA = myDuck.createAction('PERSONAL_DATA');
-const WORKING_DATA = myDuck.createAction('WORKING_DATA');
+const PERSONAL_DATA = myDuck.defineType('PERSONAL_DATA');
+const WORKING_DATA = myDuck.defineType('WORKING_DATA');
 
 export function fetchPersonalData(personalData){
   return {
@@ -26,14 +26,14 @@ const initialState = {
 
 export default function reducer(state = initialState, action){
   switch (action.type){
-  case PERSONAL_DATA:
+    case PERSONAL_DATA:
     return myDuck.createReducer({
       [PERSONAL_DATA]: (state) => ({
         state,
         personalData: action.payload,
       })
     }, state);
-  case WORKING_DATA:
+    case WORKING_DATA:
     return myDuck.createReducer({
       [WORKING_DATA]: (state) => ({
         state,
