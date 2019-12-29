@@ -8,14 +8,19 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config config/webpack/dev.js",
-    "build:dev": "webpack --config config/webpack/dev.js"
+    "build:dev": "webpack --config config/webpack/dev.js",
+    "lint": "eslint --fix --max-warnings 0 --ext .js,.jsx ./src"
   },
   "dependencies": {
     "json-server": "^0.15.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "redux-duck": "^1.2.0",
-    "webpack": "4.16.3"
+    "webpack": "4.16.3",
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1",
+    "lodash": "4.17.10",
+    "prop-types": "15.7.2"
   },
   "devDependencies": {
     "html-webpack-plugin": "3.2.0",
@@ -33,15 +38,23 @@
     "sass-loader": "7.0.3",
     "css-loader": "0.28.11",
     "style-loader": "0.21.0",
-    "prop-types": "15.7.2",
-    "react-redux": "^4.4.0",
-    "redux": "^3.3.1",
     "@babel/core": "7.4.5",
     "@babel/preset-env": "7.4.5",
     "@babel/preset-react": "7.0.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "23.6.0",
-    "babel-loader": "8.0.6"
+    "babel-loader": "8.0.6",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-loader": "2.1.0",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-react": "7.9.1",
+    "prettier": "1.14.0",
+    "prettier-stylelint": "0.4.2",
+    "reselect": "3.0.1"
   },
   "license": "ISC"
 }

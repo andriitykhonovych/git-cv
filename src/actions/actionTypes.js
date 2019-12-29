@@ -1,5 +1,5 @@
 export default {
   APP: {
-    INIT: '/app/init',
+    INIT: "/app/init"
   }
 };
