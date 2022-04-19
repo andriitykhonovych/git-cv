@@ -33,7 +33,7 @@
     "webpack-dashboard": "2.0.0",
     "autoprefixer": "9.5.0",
     "path-to-regexp": "2.2.1",
-    "node-sass": "6.0.0",
+    "node-sass": "7.0.0",
     "postcss-loader": "3.0.0",
     "sass-loader": "12.6.0",
     "css-loader": "0.28.11",
