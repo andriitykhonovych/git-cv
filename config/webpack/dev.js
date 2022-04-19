@@ -1,6 +1,5 @@
 const { resolve } = require('path');
-const { HotModuleReplacementPlugin } = require('webpack');
-const { EnvironmentPlugin } = require('webpack');
+const { EnvironmentPlugin, HotModuleReplacementPlugin } = require('webpack');
 
 const dev = {
   mode: 'development',
@@ -71,9 +70,6 @@ const dev = {
 
     // send index.html for unknown routes, so client can manage them
     historyApiFallback: true,
-
-    // show only errors and warnings in bash
-    noInfo: false,
   },
 };
 
